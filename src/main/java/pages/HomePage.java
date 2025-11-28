@@ -25,6 +25,11 @@ public class HomePage {
         return new AlertPage(driver);
     }
 
+    public HoverPage clickHoverPage(){
+        clickLink("Hover Demo");
+        return new HoverPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
