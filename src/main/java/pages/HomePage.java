@@ -14,7 +14,11 @@ public class HomePage {
     public KeyPressPage clickKeyPress(){
         clickLink("Key Press");
         return new KeyPressPage(driver);
+    }
 
+    public UploadFilePage clickUploadFile(){
+        clickLink("Upload File Demo");
+        return new UploadFilePage(driver);
     }
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
