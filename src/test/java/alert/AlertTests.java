@@ -9,7 +9,7 @@ public class AlertTests extends BaseTests {
     @Test
     public void acceptAlert(){
         var alertPage = homePage.clickAlertPage();
-        alertPage.triggleAlert();
+        alertPage.triggerAlert();
         String alertText = alertPage.getAlertText();
         Assert.assertEquals(alertText, "I am an alert box!", "Alert message not match");
         alertPage.acceptAlert();

@@ -34,6 +34,20 @@ public class HomePage {
         clickLink("Simple Form Demo");
         return new FormSubmitPage(driver);
     }
+//
+//    public DropdownPage clickDropdownPage(){
+//        clickLink("Select Dropdown List");
+//        return new DropdownPage(driver);
+//    }
+    public DropdownPage clickDropdown() {
+        clickLink("JQuery Select dropdown");
+        return new DropdownPage(driver);
+    }
+
+public ModalPage clickModalPage(){
+    clickLink("Window Popup Modal");
+    return new ModalPage(driver);
+}
 
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
