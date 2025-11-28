@@ -30,6 +30,11 @@ public class HomePage {
         return new HoverPage(driver);
     }
 
+    public FormSubmitPage clickFormSubmitPage(){
+        clickLink("Simple Form Demo");
+        return new FormSubmitPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
