@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
     protected WebDriver driver;
-    By keyPressesLink = By.linkText("Key Press");
+
 
     public HomePage(WebDriver driver){
         this.driver = driver;
@@ -20,6 +20,11 @@ public class HomePage {
         clickLink("Upload File Demo");
         return new UploadFilePage(driver);
     }
+    public AlertPage clickAlertPage(){
+        clickLink("Javascript Alerts");
+        return new AlertPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
